@@ -30,7 +30,7 @@ const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="bg-purple-50 py-20"
+      className="bg-gradient-to-b from-gray-800 to-gray-900 py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -44,19 +44,30 @@ const Projects = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold text-purple-700 mb-4">
+        <motion.h2
+          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+        >
           My Projects
-        </h2>
-        <p className="text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+        </motion.h2>
+
+        <motion.p
+          className="text-gray-300 mb-12 text-lg max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
           Here are some of the web applications I've built using modern frontend
           tools.
-        </p>
+        </motion.p>
 
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-white p-6 rounded-2xl shadow-md border hover:shadow-xl transition duration-300"
+              className="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
               whileHover={{ scale: 1.03 }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -65,19 +76,19 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-40 object-contain rounded-md mb-4 p-2"
+                className="w-full h-40 object-contain rounded-md mb-4 p-2 bg-gray-700"
               />
-              <h3 className="text-xl font-bold text-purple-600">
+              <h3 className="text-xl font-bold text-pink-400">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mt-2 text-sm">
+              <p className="text-gray-400 mt-2 text-sm">
                 {project.description}
               </p>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
                 {["React", "Tailwind", "Framer Motion"].map((tech) => (
                   <span
                     key={tech}
-                    className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-medium"
+                    className="bg-gray-700 text-pink-400 px-3 py-1 rounded-full text-xs font-medium"
                   >
                     {tech}
                   </span>
