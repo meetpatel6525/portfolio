@@ -6,7 +6,7 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="bg-gradient-to-b from-gray-800 to-gray-900 py-20"
+      className="bg-white py-20"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -26,7 +26,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-4 text-lg text-gray-300 leading-relaxed"
+          className="mt-4 text-lg text-gray-600 leading-relaxed"
         >
           I’m a self-taught frontend developer skilled in building fast,
           accessible, and user-friendly web apps using modern tools like React,
@@ -46,7 +46,7 @@ const About = () => {
           ].map((skill, index) => (
             <motion.span
               key={skill}
-              className="bg-gray-800 border border-pink-500 text-pink-400 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-600 hover:text-white transition"
+              className="bg-pink-50 border border-pink-500 text-pink-600 px-4 py-2 rounded-full text-sm font-medium hover:bg-pink-600 hover:text-white transition"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

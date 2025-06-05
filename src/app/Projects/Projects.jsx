@@ -24,13 +24,20 @@ const projects = [
     description:
       "A dashboard for managing orders, users, and analytics with chart integration.",
   },
+  {
+    id: 4,
+    title: "E-commerce Store",
+    image: "/images/wellny.png",
+    description:
+      "A dashboard for managing orders, users, and analytics with chart integration.",
+  },
 ];
 
 const Projects = () => {
   return (
     <motion.section
       id="projects"
-      className="bg-gradient-to-b from-gray-800 to-gray-900 py-20"
+      className="bg-white py-20"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -54,7 +61,7 @@ const Projects = () => {
         </motion.h2>
 
         <motion.p
-          className="text-gray-300 mb-12 text-lg max-w-2xl mx-auto"
+          className="text-gray-600 mb-12 text-lg max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -63,12 +70,12 @@ const Projects = () => {
           tools.
         </motion.p>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
-              whileHover={{ scale: 1.03 }}
+              className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300 text-left"
+              whileHover={{ scale: 1.02 }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -76,23 +83,25 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-40 object-contain rounded-md mb-4 p-2 bg-gray-700"
+                className="w-full h-48 object-contain bg-gray-100 p-4"
               />
-              <h3 className="text-xl font-bold text-pink-400">
-                {project.title}
-              </h3>
-              <p className="text-gray-400 mt-2 text-sm">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap justify-center gap-2 mt-4">
-                {["React", "Tailwind", "Framer Motion"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-gray-700 text-pink-400 px-3 py-1 rounded-full text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["React", "Tailwind", "Framer Motion"].map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

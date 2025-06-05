@@ -5,12 +5,12 @@ import React from "react";
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-gray-900 border-t border-gray-700 py-6 text-center"
+      className="bg-white border-t border-gray-200 py-6 text-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <p className="text-sm text-gray-400">
+      <p className="text-sm text-gray-600">
         &copy; {new Date().getFullYear()} Meet Bhakhar. All rights reserved.
       </p>
       <div className="flex justify-center gap-4 mt-2">
@@ -18,7 +18,7 @@ const Footer = () => {
           href="https://github.com/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-500 transition-colors"
+          className="text-gray-600 hover:text-pink-500 transition-colors"
         >
           GitHub
         </a>
@@ -26,7 +26,7 @@ const Footer = () => {
           href="https://linkedin.com/in/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-500 transition-colors"
+          className="text-gray-600 hover:text-pink-500 transition-colors"
         >
           LinkedIn
         </a>

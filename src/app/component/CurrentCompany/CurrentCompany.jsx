@@ -10,9 +10,9 @@ const CurrentCompany = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="bg-gradient-to-b from-gray-900 to-gray-800 py-20 px-6 text-white"
+      className="bg-white py-20 px-6 text-gray-800"
     >
-      <div className="max-w-3xl mx-auto p-10 text-center rounded-2xl shadow-xl bg-gray-900">
+      <div className="max-w-3xl mx-auto p-10 text-center rounded-2xl shadow-xl bg-white border border-gray-200">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
@@ -37,12 +37,14 @@ const CurrentCompany = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-lg text-gray-300 leading-relaxed"
+          className="text-lg text-gray-600 leading-relaxed"
         >
           I’m currently working as a{" "}
-          <span className="font-semibold text-white">Front-End Developer</span>{" "}
+          <span className="font-semibold text-gray-800">
+            Front-End Developer
+          </span>{" "}
           at{" "}
-          <span className="font-semibold text-white">
+          <span className="font-semibold text-gray-800">
             JBRSYS Tech Private LIMITED
           </span>
           , building scalable, high-performance, and user-first web applications
